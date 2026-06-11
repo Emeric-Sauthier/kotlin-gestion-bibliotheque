@@ -10,10 +10,10 @@ class Livre : Media, Consultable<Livre>, Empruntable<Livre> {
 
     // Setters
     fun setAuteur(auteur: String) { this.auteur = auteur }
-    fun setEiteur(editeur: String) { this.editeur = editeur }
+    fun setEditeur(editeur: String) { this.editeur = editeur }
 
     // Constructeurs
-    constructor(titre: String, dateDeParution: String, auteur: String, editeur: String) : super(dateDeParution) {
+    constructor(titre: String, dateDeParution: String, auteur: String, editeur: String) : super(titre, dateDeParution) {
         this.auteur = auteur
         this.editeur = editeur
     }

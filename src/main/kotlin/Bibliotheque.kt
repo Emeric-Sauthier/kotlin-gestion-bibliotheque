@@ -33,7 +33,7 @@ class Bibliotheque {
             println("Ce média ne peut pas être emprunté.")
             return
         }
-        if (!emprunts.contains(media)) {
+        if (emprunts.contains(media)) {
             println("Impossible d'emprunter ce média, il est déjà emprunté.")
             return
         }
