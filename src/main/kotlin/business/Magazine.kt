@@ -3,11 +3,8 @@ package business
 class Magazine : Media, Consultable<Magazine> {
 
     // Attributs
-    private var numero: String
+    var numero: String
         private set
-
-    // Setters
-    fun setNumero(numero: String) { this.numero = numero }
 
     // Constructeurs
     constructor(titre: String, date: String, numero: String) : super(titre, date) {

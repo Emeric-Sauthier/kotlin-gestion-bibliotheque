@@ -8,10 +8,6 @@ class Livre : Media, Consultable<Livre>, Empruntable<Livre> {
     var editeur: String
         private set
 
-    // Setters
-    fun setAuteur(auteur: String) { this.auteur = auteur }
-    fun setEditeur(editeur: String) { this.editeur = editeur }
-
     // Constructeurs
     constructor(titre: String, dateDeParution: String, auteur: String, editeur: String) : super(titre, dateDeParution) {
         this.auteur = auteur
@@ -20,19 +16,19 @@ class Livre : Media, Consultable<Livre>, Empruntable<Livre> {
 
     // Méthodes
     override fun afficher() {
-        println(" - Livre: Titre = '${this.titre}', Auteur = '${this.auteur}', Éditeur = '${this.editeur}', Date de parution = '${this.dateDeParution}'")
+        println("- Livre: Titre = '${this.titre}', Auteur = '${this.auteur}', Éditeur = '${this.editeur}', Date de parution = '${this.dateDeParution}'")
     }
 
     override fun consulter() {
-        println("Le livre '${this.titre}' de ${this.auteur} est consulté sur place")
+        println("Le livre '${this.titre}' de '${this.auteur}' est consulté sur place.")
     }
     override fun emprunter(): Boolean {
-        println("Le livre '${this.titre}' de ${this.auteur} a été emprunté")
+        println("Le livre '${this.titre}' de '${this.auteur}' a été emprunté.")
         return true
     }
 
     override fun retourner(): Boolean {
-        println("Le livre '${this.titre}' de ${this.auteur} a été retourné")
+        println("Le livre '${this.titre}' de '${this.auteur}' a été retourné.")
         return true
     }
 }

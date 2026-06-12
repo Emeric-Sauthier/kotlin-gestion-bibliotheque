@@ -1,15 +1,8 @@
 package business
 
-import java.text.DateFormat
-import java.text.SimpleDateFormat
-import java.time.DayOfWeek
 import java.time.LocalDate
 
 abstract class Media {
-    // Companion
-    companion object {
-        val dateFormater: SimpleDateFormat = SimpleDateFormat("yyyy/MM/dd")
-    }
 
     // Attributs
     var titre: String = ""
@@ -31,7 +24,7 @@ abstract class Media {
     // Constructeurs
     constructor(titre: String, date: String) {
         this.setTitle(titre)
-        this.setDate(date,)
+        this.setDate(date)
     }
 
     constructor(titre: String) : this(titre, LocalDate.now().toString())

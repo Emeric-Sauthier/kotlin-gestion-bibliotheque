@@ -11,10 +11,6 @@ class Bibliotheque {
     var emprunts: MutableList<Media>
         private set
 
-    // Setters
-    fun setMedias(medias: MutableList<Media>) { this.medias = medias }
-    fun setEmprunts(emprunts: MutableList<Media>) { this.emprunts = emprunts }
-
     // Constructeurs
     constructor(medias: MutableList<Media>, emprunts: MutableList<Media>) {
         this.medias = medias
@@ -78,7 +74,7 @@ class Bibliotheque {
             return
         }
 
-        println("Médias empruntés")
+        println("Emprunts en cours :")
         for (mediaEmprunte in emprunts) {
             mediaEmprunte.afficher()
         }
