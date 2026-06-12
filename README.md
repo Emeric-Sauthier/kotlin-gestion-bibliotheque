@@ -23,7 +23,15 @@ Application Kotlin console simulant un système de gestion de bibliothèque : em
 
 ## Architecture du projet
 
-
+`Media` -> classe abstraite  
+`Consultable` -> interface permettant la consultation  
+`Empruntable` -> interface permettant l'emprunt  
+`DVD` -> hérite de `Media`, et implémente `Consultable` et `Empruntable` + attributs `duree` et `genre`  
+`EnregistrementAudio` -> hérite de `Media`, et implémente `Consultable` et `Empruntable` + attributs `duree` et `genre`  
+`Journal` -> hérite de `Media`, et implémente `Consultable`  
+`Livre` -> hérite de `Media`, et implémente `Consultable` et `Empruntable` + attributs `auteur` et `editeur`  
+`Magazine` -> hérite de `Media`, et implémente `Consultable` + attribut `numero`  
+`Bibliotheque` -> classe gérant différents types de médias  
 
 ---
 
